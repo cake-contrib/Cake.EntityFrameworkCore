@@ -83,6 +83,7 @@ namespace Cake.EntityFrameworkCore
                 builder.Append("--verbose");
 
             return builder;
+
         }
     }
 }

@@ -21,11 +21,13 @@ namespace Cake.EntityFrameworkCore.Tests.Database
             }
 
             [Theory]
-            [InlineData("database update --data-dir \"c:/Temp/DataDirectory\"")]
+            [InlineData("exec --depsfile \"c:/myproject/MyNamespace.WebUI.deps.json\" --additionalprobingpath \"C:/Users/lfisch3/.nuget/packages\" --runtimeconfig \"c:/myproject/MyNamespace.Migrations.runtimeconfig.json\" \"c:/myproject/tools/Microsoft.EntityFrameworkCore.Tools.5.0.4/netcoreapp2.0/any/ef.dll\" database update --assembly \"c:/myproject/MyNamespace.Migrations.dll\" --startup-assembly \"c:/myproject/MyNamespace.WebUI.dll\" --project-dir \"c:/myproject\" --data-dir \"c:/myproject\" --context \"MyDbContext\" --root-namespace \"My.Demo.Migrations\" --verbose")]
             public void Should_Update(string expected)
             {
                 // Given
                 var fixture = new EfCoreDatabaseUpdaterFixture();
+
+                fixture.Tools.RegisterFile("c:/myproject/tools/Microsoft.EntityFrameworkCore.Tools.5.0.4/netcoreapp2.0/any/ef.dll");
 
                 fixture.Settings.WorkingDirectory = "c:/myproject";
                 fixture.Settings.DbContextClassName = "MyDbContext";
@@ -33,7 +35,6 @@ namespace Cake.EntityFrameworkCore.Tests.Database
                 fixture.Settings.MigrationDll = "MyNamespace.Migrations.dll";
                 fixture.Settings.StartupDll = "MyNamespace.WebUI.dll";
                 fixture.Settings.Verbose = true;
-                fixture.Settings.Verbosity = Common.Tools.DotNetCore.DotNetCoreVerbosity.Diagnostic;
                 fixture.Settings.Version = true;
 
                 // When
