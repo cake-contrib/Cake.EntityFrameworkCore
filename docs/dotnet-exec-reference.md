@@ -1,11 +1,8 @@
----
-Order: 2
-Title: dotnet exec reference
----
+# dotnet exec reference
 
 dotnet exec allows executing of the ef.dll along with the efcore assembly
 
-```powershell
+```cmd
 Usage: dotnet [host-options] [path-to-application]
 
 path-to-application:

@@ -1,11 +1,8 @@
----
-Order: 2
-Title: ef cli Reference (dotnet ef)
----
+# ef cli Reference (dotnet ef)
 
 The **ef.dll** utility for enabling, adding, scripting, and applying migrations from assemblies.
 
-Below is a summary of the commands available and used in this Cake.EntityFramework6 plugin. 
+Below is a summary of the commands available and used in this <code>Cake.EntityFrameworkCore</code> plugin. 
 
 ```powershell
                      _/\__
@@ -35,7 +32,7 @@ Commands:
 
 ## Database Commands
 
-```powershell
+```cmd
 Usage: dotnet ef database [options] [command]
 
 Options:
@@ -50,7 +47,7 @@ Commands:
 ```
 
 ### Database Update
-```powershell
+```cmd
 Usage: dotnet ef database update [arguments] [options]
 
 Arguments:
@@ -73,7 +70,7 @@ Options:
 ```
 
 ### Database Drop
-```powershell
+```cmd
 Usage: dotnet ef database drop [options]
 
 Options:
@@ -94,8 +91,7 @@ Options:
 ```
 
 ## Migrations
-
-```powershell
+```cmd
 Usage: dotnet ef migrations [options] [command]
 
 Options:
@@ -112,7 +108,7 @@ Commands:
 ```
 
 ### Migrations Add
-```powershell
+```cmd
 Usage: dotnet ef migrations add [arguments] [options]
 
 Arguments:
@@ -137,7 +133,7 @@ Options:
 ```
 
 ### Migrations List
-```powershell
+```cmd
 Usage: dotnet ef migrations list [options]
 
 Options:
@@ -159,7 +155,7 @@ Options:
 ```
 
 ### Migrations Remove
-```powershell
+```cmd
 Usage: dotnet ef migrations remove [options]
 
 Options:
@@ -180,7 +176,7 @@ Options:
 ```
 
 ### Migrations Script
-```powershell
+```cmd
 Usage: dotnet ef migrations script [arguments] [options]
 
 Arguments:
@@ -206,22 +202,24 @@ Options:
 ```
 
 ## DbContext
+```cmd
 Usage: dotnet ef dbcontext [options] [command]
 
-Options:
-  -h|--help        Show help information
-  -v|--verbose     Show verbose output.
-  --no-color       Don't colorize output.
-  --prefix-output  Prefix output with level.
+Options:  
+  -h|--help        Show help information  
+  -v|--verbose     Show verbose output.     
+  --no-color       Don't colorize output.  
+  --prefix-output  Prefix output with level.  
 
-Commands:
-  info      Gets information about a DbContext type.
-  list      Lists available DbContext types.
-  scaffold  Scaffolds a DbContext and entity types for a database.
-  script    Generates a SQL script from the DbContext. Bypasses any migrations
+Commands:  
+  info      Gets information about a DbContext type.  
+  list      Lists available DbContext types.  
+  scaffold  Scaffolds a DbContext and entity types for a database.  
+  script    Generates a SQL script from the DbContext. Bypasses any migrations  
+```
 
 ### DbContext Info 
-```powershell
+```cmd
 Usage: dotnet ef dbcontext info [options]
 
 Options:
@@ -241,7 +239,7 @@ Options:
 ```
 
 ### DbContext List 
-```powershell
+```cmd
 Usage: dotnet ef dbcontext list [options]
 
 Options:
@@ -259,7 +257,7 @@ Options:
 ```
 
 ### DbContext Scaffold 
-```powershell
+```cmd
 Usage: dotnet ef dbcontext scaffold [arguments] [options]
 
 Arguments:
@@ -294,7 +292,7 @@ Options:
 ```
 
 ### DbContext Script
-```powershell
+```cmd
 Usage: dotnet ef dbcontext script [options]
 
 Options:

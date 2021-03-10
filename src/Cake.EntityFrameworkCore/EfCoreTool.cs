@@ -69,7 +69,6 @@ namespace Cake.EntityFrameworkCore
             builder.AppendSwitchQuoted("--runtimeconfig", runtimeConfigPath.ToString());
             builder.AppendQuoted(efDllPath.ToString());
 
-            // Command
             AppendToolArguments(builder, settings);
 
             builder.AppendSwitchQuoted("--assembly", migrationDllPath.ToString());
@@ -77,7 +76,9 @@ namespace Cake.EntityFrameworkCore
             builder.AppendSwitchQuoted("--project-dir", migrationsDirectory.ToString());
             builder.AppendSwitchQuoted("--data-dir", migrationsDirectory.ToString());
             builder.AppendSwitchQuoted("--context", settings.DbContextClassName);
-            builder.AppendSwitchQuoted("--root-namespace", settings.MigrationsNamespace);
+
+            if (!string.IsNullOrWhiteSpace(settings.MigrationsNamespace))
+                builder.AppendSwitchQuoted("--root-namespace", settings.MigrationsNamespace);
 
             if (settings.Verbose)
                 builder.Append("--verbose");

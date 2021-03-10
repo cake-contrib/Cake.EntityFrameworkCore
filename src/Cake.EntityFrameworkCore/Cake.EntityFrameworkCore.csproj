@@ -13,12 +13,12 @@
 		<IncludeBuildOutput>false</IncludeBuildOutput>
 	</PropertyGroup>
 	<PropertyGroup>
-		<Version>2.0.0</Version>
+		<Version>2.1.0</Version>
 		<Title>Cake.EntityFrameworkCore</Title>
 		<Description>Cake.EntityFrameworkCore is a set of Cake aliases for working with Entity Framework Core Migrations from an assembly instead of project source files.</Description>
 		<Authors>louisfischer, Cake-Contrib</Authors>
 		<Company>Cake-Contrib</Company>
-		<PackageIconUrl>https://cdn.jsdelivr.net/gh/cake-contrib/graphics/png/cake-contrib-medium.png</PackageIconUrl>
+		<PackageIcon>icon.png</PackageIcon>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageProjectUrl>https://github.com/louisfischer/Cake.EntityFrameworkCore.git</PackageProjectUrl>
 		<PackageTags>Cake;ef core;ef;entity framework core;build;</PackageTags>
@@ -30,11 +30,11 @@
 		<FileVersion>2.0.0.0</FileVersion>
 	</PropertyGroup>
 	<ItemGroup>
-		<None Remove="efcore.ts" />
+		<None Include="icon.png" Pack="true" PackagePath="\"/>
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="Cake.Core" Version="1.1.0" PrivateAssets="All" />
-		<PackageReference Include="Cake.Common" Version="1.1.0" PrivateAssets="All" />
+		<PackageReference Include="Cake.Core" Version="1.0.0" PrivateAssets="All" />
+		<PackageReference Include="Cake.Common" Version="1.0.0" PrivateAssets="All" />
 	</ItemGroup>
 	<Target Name="PackBuildOutputs" DependsOnTargets="SatelliteDllsProjectOutputGroup;DebugSymbolsProjectOutputGroup">
 		<ItemGroup>
