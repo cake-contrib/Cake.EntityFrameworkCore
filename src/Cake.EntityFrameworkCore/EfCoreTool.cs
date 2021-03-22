@@ -58,7 +58,7 @@ namespace Cake.EntityFrameworkCore
             var migrationsDirectory = settings.WorkingDirectory.MakeAbsolute(_environment);
             var migrationDllPath = settings.WorkingDirectory.CombineWithFilePath(settings.MigrationDll).MakeAbsolute(_environment);
             var startupDllPath = settings.WorkingDirectory.CombineWithFilePath(settings.StartupDll).MakeAbsolute(_environment);
-            var runtimeConfigPath = settings.WorkingDirectory.CombineWithFilePath(System.IO.Path.GetFileNameWithoutExtension(settings.MigrationDll)).AppendExtension(".runtimeconfig.json").MakeAbsolute(_environment).MakeAbsolute(_environment);
+            var runtimeConfigPath = settings.WorkingDirectory.CombineWithFilePath(System.IO.Path.GetFileNameWithoutExtension(settings.StartupDll)).AppendExtension(".runtimeconfig.json").MakeAbsolute(_environment).MakeAbsolute(_environment);
             var depsJsonPath = settings.WorkingDirectory.CombineWithFilePath(System.IO.Path.GetFileNameWithoutExtension(settings.StartupDll)).AppendExtension(".deps.json").MakeAbsolute(_environment);
             var pathToNuGetPackages = DirectoryPath.FromString(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)).Combine(".nuget/packages").MakeAbsolute(_environment);
             var efDllPath = _tools.Resolve("ef.dll").MakeAbsolute(_environment);
