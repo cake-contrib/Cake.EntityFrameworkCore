@@ -1,5 +1,4 @@
-﻿using Cake.Common.Tools.DotNetCore;
-using Cake.Common.Tools.DotNetCore.Pack;
+﻿using Cake.Common.Tools.DotNet;
 using Cake.Core;
 using Cake.Core.Diagnostics;
 using Cake.Core.IO;
@@ -16,7 +15,7 @@ namespace Cake.EntityFrameworkCore
     /// Base class for all efcore tools.
     /// </summary>
     /// <typeparam name="TSettings">The settings type.</typeparam>
-    public abstract class EfCoreTool<TSettings> : DotNetCoreTool<TSettings>
+    public abstract class EfCoreTool<TSettings> : DotNetTool<TSettings>
         where TSettings : EfCoreToolSettings
     {
         protected readonly ICakeEnvironment _environment;

@@ -42,7 +42,7 @@ namespace Cake.EntityFrameworkCore.Tests.Database
                 var result = fixture.Run();
 
                 // Then
-                var expected = $"exec --depsfile \"c:/myproject/MyNamespace.WebUI.deps.json\" --additionalprobingpath \"{DirectoryPath.FromString(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile))}/.nuget/packages\" --runtimeconfig \"c:/myproject/MyNamespace.Migrations.runtimeconfig.json\" \"c:/myproject/tools/Microsoft.EntityFrameworkCore.Tools.5.0.4/netcoreapp2.0/any/ef.dll\" database update --assembly \"c:/myproject/MyNamespace.Migrations.dll\" --startup-assembly \"c:/myproject/MyNamespace.WebUI.dll\" --project-dir \"c:/myproject\" --data-dir \"c:/myproject\" --context \"MyDbContext\" --root-namespace \"My.Demo.Migrations\" --verbose";
+                var expected = $"exec --depsfile \"c:/myproject/MyNamespace.WebUI.deps.json\" --additionalprobingpath \"{DirectoryPath.FromString(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile))}/.nuget/packages\" --runtimeconfig \"c:/myproject/MyNamespace.WebUI.runtimeconfig.json\" \"c:/myproject/tools/Microsoft.EntityFrameworkCore.Tools.5.0.4/netcoreapp2.0/any/ef.dll\" database update --assembly \"c:/myproject/MyNamespace.Migrations.dll\" --startup-assembly \"c:/myproject/MyNamespace.WebUI.dll\" --project-dir \"c:/myproject\" --data-dir \"c:/myproject\" --context \"MyDbContext\" --root-namespace \"My.Demo.Migrations\" --verbose";
 
                 Assert.Equal(expected, result.Args);
             }

@@ -1,5 +1,4 @@
-﻿using Cake.Common.Tools.DotNetCore;
-using Cake.Common.Tools.DotNetCore.Tool;
+﻿using Cake.Common.Tools.DotNet;
 using Cake.Core;
 using Cake.Core.IO;
 using Cake.Core.Tooling;
@@ -14,7 +13,7 @@ namespace Cake.EntityFrameworkCore
     /// <summary>
     /// Ef Core Tool Basic Settings
     /// </summary>
-    public class EfCoreToolSettings : DotNetCoreSettings
+    public class EfCoreToolSettings : DotNetSettings
     {
         /// <summary>
         ///  Filename of the DLL that contains your migrations.

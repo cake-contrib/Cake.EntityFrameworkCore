@@ -1,5 +1,4 @@
-﻿using Cake.Common.Tools.DotNetCore;
-using Cake.Core;
+﻿using Cake.Core;
 using Cake.Core.Diagnostics;
 using Cake.Core.IO;
 using Cake.Core.Tooling;
