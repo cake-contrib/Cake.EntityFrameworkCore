@@ -1,5 +1,5 @@
 # Cake.EntityFrameworkCore
-A set of Cake aliases for Entity Framework Core (.NET Core or .NET5 ) code-first migration using the ef.dll.
+A set of Cake aliases for Entity Framework Core (.NET Core or .NET6 or greater ) code-first migration using the ef.dll.
 Entity Framework Core does not provide an easy way to run migrations (database update) from a compile dll.
 
 This addin is inspired by [Benjamin Day's](https://github.com/benday) script for [deploying ef core migrations](https://github.com/benday-inc/deploy-ef-core-migration) from a dll.
